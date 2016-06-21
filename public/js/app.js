@@ -4,6 +4,7 @@ $(document).ready(function(){
   // The $ before start refers that jquery is being used there, and needs to be at the beginning of every start.
   var minutes = $('#minutes');
   var seconds = $('#seconds');
+  var breakBtn = $('#break');
 
   start.on('click', startCountdown);
 
@@ -11,6 +12,10 @@ $(document).ready(function(){
     setInterval(function(){
        var secondsVal = +seconds.text(); //the plus makes this use numbers
        var minutesVal = +minutes.text();
+       if(secondsVal === 0 && minutesVal === 0){
+         breakBtn.removeClass('disabled');
+         breakBtn.removeAttr('disabled');
+       }
        if(secondsVal === 0){
         minutes.text(minutesVal - 1);
         seconds.text(59);
