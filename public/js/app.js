@@ -10,12 +10,14 @@ $(document).ready(function(){
   function startCountdown(){
     setInterval(function(){
        var secondsVal = +seconds.text(); //the plus makes this use numbers
-      if(secondsVal === 0){
+       var minutesVal = +minutes.text();
+       if(secondsVal === 0){
+        minutes.text(minutesVal - 1);
         seconds.text(59);
-        } else {
+      } else {
         if(secondsVal <= 10){
           seconds.text("0" + (secondsVal-1));
-        } else {
+      } else {
         seconds.text(secondsVal - 1);
 
         }
