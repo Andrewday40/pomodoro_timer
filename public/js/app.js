@@ -7,6 +7,11 @@ $(document).ready(function(){
   var breakBtn = $('#break');
 
   start.on('click', startCountdown);
+  breakBtn.on('click', breakCountdown);
+
+  function breakCountdown() {
+    alert('alert message');
+  }
 
   function startCountdown(){
     setInterval(function(){
