@@ -16,4 +16,3 @@ I am building a timer web application using
   6. as a user, I see a tooltip for the break button.
   7. As a user, when the break button becomes enabled, I can click it.
   8. As a user, when I click the break button, the timer switches to 5 minutes and begins counting down.
-  9. 
